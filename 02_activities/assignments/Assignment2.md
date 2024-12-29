@@ -54,7 +54,9 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+To retain changes to customer addresses, the bookstore would use a type 2 slowly changing dimension. In this case, each time a customer's address is updated, a new row is created. For this to work, the database will have to assign a new customer ID to the customer each time their address is changed and the customer will be treated as a new customer in the database.
+
+To overwrite changes to customer addresses, you would use a type 1 slowly changing dimension. This will simply overwrite the customer's existing address with the new one.
 ```
 
 ***
